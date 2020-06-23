@@ -22,11 +22,11 @@ final class SettingsViewModel: Observable {
     weak var delegate: SettingsViewModelDelegate?
     private(set) var sensitivity: Sensitivity
     private(set) var controlMode: ControlMode
-    private let bluetoothLink: BluetoothLink
+    private let crtpDriver: CrtpDriver
     var weakObservers: [WeakBox] = [WeakBox]()
     
-    init(sensitivity: Sensitivity, controlMode: ControlMode, bluetoothLink: BluetoothLink) {
-        self.bluetoothLink = bluetoothLink
+    init(sensitivity: Sensitivity, controlMode: ControlMode, crtpDriver: CrtpDriver) {
+        self.crtpDriver = crtpDriver
         self.sensitivity = sensitivity
         self.controlMode = controlMode
     }
@@ -151,9 +151,10 @@ final class SettingsViewModel: Observable {
     }
     
     func bootloaderClicked() {
-        if bluetoothLink.isConnected {
-            bluetoothLink.disconnect()
-        }
+//        if bluetoothLink.isConnected {
+//            bluetoothLink.disconnect()
+//        }
+        crtpDriver.disconnect()
     }
     
     private func title(at index: Int) -> String? {

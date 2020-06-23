@@ -81,9 +81,9 @@ enum ControlMode: Int {
     var titles: [String] {
         switch self {
         case .mode1:
-            return ["Yaw", "Pitch",  "Roll", "Thrust"]
-        case .mode2:
             return ["Yaw", "Thrust",  "Roll", "Pitch"]
+        case .mode2:
+            return ["Yaw", "Pitch",  "Roll", "Thrust"]
         case .mode3:
             return ["Roll", "Pitch",  "Yaw", "Thrust"]
         case .mode4:
@@ -107,21 +107,21 @@ enum ControlMode: Int {
         var commander: CrazyFlieCommander
         switch self {
         case .mode1:
-            rightJoystick.thrustControl = .y
-            commander = SimpleCrazyFlieCommander(
-                pitchProvider: .y(provider: leftJoystick),
-                rollProvider: .x(provider: rightJoystick),
-                yawProvider: .x(provider: leftJoystick),
-                thrustProvider: .y(provider: rightJoystick),
-                settings: settings)
-            break
-        case .mode2:
             leftJoystick.thrustControl = .y
             commander = SimpleCrazyFlieCommander(
                 pitchProvider: .y(provider: rightJoystick),
                 rollProvider: .x(provider:  rightJoystick),
                 yawProvider: .x(provider: leftJoystick),
                 thrustProvider: .y(provider: leftJoystick),
+                settings: settings)
+            break
+        case .mode2:
+            rightJoystick.thrustControl = .y
+            commander = SimpleCrazyFlieCommander(
+                pitchProvider: .y(provider: leftJoystick),
+                rollProvider: .x(provider: rightJoystick),
+                yawProvider: .x(provider: leftJoystick),
+                thrustProvider: .y(provider: rightJoystick),
                 settings: settings)
             break
         case .mode3:

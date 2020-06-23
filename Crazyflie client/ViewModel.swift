@@ -35,7 +35,7 @@ final class ViewModel {
         leftJoystickProvider.add(observer: self)
         rightJoystickProvider.add(observer: self)
         
-        crazyFlie = CrazyFlie(delegate: self)
+        crazyFlie = CrazyFlie(crtpDriver:ESPUDPLink(), delegate: self)
         loadDefaults()
     }
     
@@ -62,10 +62,10 @@ final class ViewModel {
     }
     
     lazy var settingsViewModel: SettingsViewModel? = {
-        guard let bluetoothLink = self.crazyFlie?.bluetoothLink else {
+        guard let crtpDriver = self.crazyFlie?.crtpDriver else {
             return nil
         }
-        let settings = SettingsViewModel(sensitivity: self.sensitivity, controlMode: self.controlMode, bluetoothLink: bluetoothLink)
+        let settings = SettingsViewModel(sensitivity: self.sensitivity, controlMode: self.controlMode, crtpDriver: crtpDriver)
         settings.add(observer: self)
         return settings
     }()

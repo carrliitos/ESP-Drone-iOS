@@ -52,6 +52,12 @@ final class SettingsViewController: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("操作的输入框: \(textField)")
+        textField.becomeFirstResponder()
+        return true
+    }
+    
     fileprivate func updateUI() {
         guard let viewModel = viewModel else {
             return
@@ -90,6 +96,11 @@ final class SettingsViewController: UIViewController {
     
     @IBAction func onBootloaderClicked( _ sender: Any) {
         viewModel?.bootloaderClicked()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("点击页面 touchesBegan")
+        view.endEditing(true)
     }
 }
 
