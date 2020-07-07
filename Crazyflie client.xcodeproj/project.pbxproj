@@ -16,9 +16,6 @@
 		3A003951198AE038001799A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A00394F198AE038001799A4 /* Main.storyboard */; };
 		3ACFD047199632BA00FDF11A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACFD046199632B900FDF11A /* CoreBluetooth.framework */; };
 		41A02DC5218A80CC0036DC36 /* Crazyflie_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A02DC4218A80CC0036DC36 /* Crazyflie_clientTests.swift */; };
-		516212D81AE7D6B40044BC2B /* BluetoothLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516212D71AE7D6B40044BC2B /* BluetoothLink.swift */; };
-		5169E6941B66527900D29911 /* BootloaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169E6931B66527900D29911 /* BootloaderViewController.swift */; };
-		5169E6961B66C41900D29911 /* FirmwareImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169E6951B66C41900D29911 /* FirmwareImage.swift */; };
 		5169E6A11B67C8FC00D29911 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169E6A01B67C8FC00D29911 /* libz.dylib */; };
 		5199641E1A0E11D7008A6D72 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5199641D1A0E11D7008A6D72 /* DefaultPreferences.plist */; };
 		519AB5E51B6B75BB007BDE9B /* Watchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AB5E41B6B75BB007BDE9B /* Watchdog.swift */; };
@@ -32,7 +29,6 @@
 		51E178491A277AE100BB2AF7 /* Default-Portrait@2x 15-46-03-260.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E178411A277AE100BB2AF7 /* Default-Portrait@2x 15-46-03-260.png */; };
 		51E1784A1A277AE100BB2AF7 /* Default-Portrait@2x 15-46-54-404.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E178421A277AE100BB2AF7 /* Default-Portrait@2x 15-46-54-404.png */; };
 		51E1784B1A277AE100BB2AF7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E178431A277AE100BB2AF7 /* Default.png */; };
-		51F9501F1B691AC7008A7D8A /* Bootloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F9501E1B691AC7008A7D8A /* Bootloader.swift */; };
 		58B89C801E539F0000750790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B89C7F1E539F0000750790 /* AppDelegate.swift */; };
 		58B89C831E539F0C00750790 /* BCJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B89C811E539F0C00750790 /* BCJoystick.swift */; };
 		58B89C841E539F0C00750790 /* BCJoystickViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B89C821E539F0C00750790 /* BCJoystickViewModel.swift */; };
@@ -78,9 +74,6 @@
 		41A02DC2218A80CC0036DC36 /* Crazyflie clientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crazyflie clientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A02DC4218A80CC0036DC36 /* Crazyflie_clientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crazyflie_clientTests.swift; sourceTree = "<group>"; };
 		41A02DC6218A80CC0036DC36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		516212D71AE7D6B40044BC2B /* BluetoothLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothLink.swift; sourceTree = "<group>"; };
-		5169E6931B66527900D29911 /* BootloaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootloaderViewController.swift; sourceTree = "<group>"; };
-		5169E6951B66C41900D29911 /* FirmwareImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirmwareImage.swift; sourceTree = "<group>"; };
 		5169E6A01B67C8FC00D29911 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5199641D1A0E11D7008A6D72 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
 		519AB5E41B6B75BB007BDE9B /* Watchdog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watchdog.swift; sourceTree = "<group>"; };
@@ -94,7 +87,6 @@
 		51E178411A277AE100BB2AF7 /* Default-Portrait@2x 15-46-03-260.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x 15-46-03-260.png"; path = "images/Default-Portrait@2x 15-46-03-260.png"; sourceTree = "<group>"; };
 		51E178421A277AE100BB2AF7 /* Default-Portrait@2x 15-46-54-404.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x 15-46-54-404.png"; path = "images/Default-Portrait@2x 15-46-54-404.png"; sourceTree = "<group>"; };
 		51E178431A277AE100BB2AF7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
-		51F9501E1B691AC7008A7D8A /* Bootloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootloader.swift; sourceTree = "<group>"; };
 		58B89C7F1E539F0000750790 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58B89C811E539F0C00750790 /* BCJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCJoystick.swift; sourceTree = "<group>"; };
 		58B89C821E539F0C00750790 /* BCJoystickViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCJoystickViewModel.swift; sourceTree = "<group>"; };
@@ -157,6 +149,7 @@
 				301C61D498506D25B58E3ABF /* Pods */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		3A00393B198AE038001799A4 /* Products */ = {
 			isa = PBXGroup;
@@ -201,12 +194,8 @@
 				58B89C8D1E539F4500750790 /* SettingsViewModel.swift */,
 				58B89C8E1E539F4500750790 /* ViewController.swift */,
 				58B89C8F1E539F4500750790 /* ViewModel.swift */,
-				516212D71AE7D6B40044BC2B /* BluetoothLink.swift */,
 				26DC91FC2459561100943C5F /* ESPUDPLink.swift */,
 				9C974A871CAE58840002418A /* MotionLink.swift */,
-				5169E6931B66527900D29911 /* BootloaderViewController.swift */,
-				5169E6951B66C41900D29911 /* FirmwareImage.swift */,
-				51F9501E1B691AC7008A7D8A /* Bootloader.swift */,
 				519AB5E41B6B75BB007BDE9B /* Watchdog.swift */,
 				58B89C851E539F2A00750790 /* CommandPacket.h */,
 				58B89C861E539F2A00750790 /* CommandPacket.m */,
@@ -304,7 +293,7 @@
 				ORGANIZATIONNAME = Bitcraze;
 				TargetAttributes = {
 					3A003939198AE038001799A4 = {
-						DevelopmentTeam = QWY5DY832N;
+						DevelopmentTeam = QWXF6GB4AV;
 						LastSwiftMigration = 0810;
 					};
 					41A02DC1218A80CC0036DC36 = {
@@ -393,15 +382,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Crazyflie client/Pods-Crazyflie client-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/zipzap/zipzap.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/zipzap.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -418,10 +403,7 @@
 				26DC91FF2459750400943C5F /* CrtpDriver.swift in Sources */,
 				58B89C901E539F4500750790 /* Observer.swift in Sources */,
 				58B89C801E539F0000750790 /* AppDelegate.swift in Sources */,
-				5169E6941B66527900D29911 /* BootloaderViewController.swift in Sources */,
-				516212D81AE7D6B40044BC2B /* BluetoothLink.swift in Sources */,
 				58B89C911E539F4500750790 /* Settings.swift in Sources */,
-				51F9501F1B691AC7008A7D8A /* Bootloader.swift in Sources */,
 				519AB5E51B6B75BB007BDE9B /* Watchdog.swift in Sources */,
 				58B89C841E539F0C00750790 /* BCJoystickViewModel.swift in Sources */,
 				58B89C971E539F9A00750790 /* CrazyFlieCommandHelper.swift in Sources */,
@@ -430,7 +412,6 @@
 				26DC91FD2459561100943C5F /* ESPUDPLink.swift in Sources */,
 				58B89C951E539F4500750790 /* ViewModel.swift in Sources */,
 				58B89C831E539F0C00750790 /* BCJoystick.swift in Sources */,
-				5169E6961B66C41900D29911 /* FirmwareImage.swift in Sources */,
 				58B89C871E539F2A00750790 /* CommandPacket.m in Sources */,
 				9C974A881CAE58840002418A /* MotionLink.swift in Sources */,
 				58B89C891E539F3700750790 /* CrazyFlie.swift in Sources */,
@@ -588,9 +569,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.0.1;
+				CURRENT_PROJECT_VERSION = 0.0.3;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = QWY5DY832N;
+				DEVELOPMENT_TEAM = QWXF6GB4AV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Crazyflie client/Crazyflie client-Prefix.pch";
 				INFOPLIST_FILE = "Crazyflie client/Crazyflie client-Info.plist";
@@ -601,7 +582,7 @@
 					"\"$(PROJECT_DIR)/Crazyflie client\"",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.espressif.EspPlane;
+				PRODUCT_BUNDLE_IDENTIFIER = com.espressif.espdrone;
 				PRODUCT_NAME = "ESP-Drone";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Crazyflie client/Crazyflie client-Bridging-Header.h";
@@ -620,9 +601,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.0.1;
+				CURRENT_PROJECT_VERSION = 0.0.3;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = QWY5DY832N;
+				DEVELOPMENT_TEAM = QWXF6GB4AV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Crazyflie client/Crazyflie client-Prefix.pch";
 				INFOPLIST_FILE = "Crazyflie client/Crazyflie client-Info.plist";
@@ -633,7 +614,7 @@
 					"\"$(PROJECT_DIR)/Crazyflie client\"",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.espressif.EspPlane;
+				PRODUCT_BUNDLE_IDENTIFIER = com.espressif.espdrone;
 				PRODUCT_NAME = "ESP-Drone";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Crazyflie client/Crazyflie client-Bridging-Header.h";

@@ -49,16 +49,16 @@ class ESPUDPLink: NSObject, CrtpDriver, GCDAsyncUdpSocketDelegate {
         print("didReceive: \(String(describing: recv))")
     }
     func udpSocket(_ sock: GCDAsyncUdpSocket, didNotConnect error: Error?) {
-        print("连接失败: \(String(describing: error))")
+        print("Connection failed: \(String(describing: error))")
     }
     func udpSocket(_ sock: GCDAsyncUdpSocket, didSendDataWithTag tag: Int) {
-        print("已经发送数据: \(tag)")
+        print("Data has been sent: \(tag)")
     }
     func udpSocketDidClose(_ sock: GCDAsyncUdpSocket, withError error: Error?) {
-        print("断开连接 error: \(String(describing: error))")
+        print("Disconnect error: \(String(describing: error))")
     }
     func udpSocket(_ sock: GCDAsyncUdpSocket, didConnectToAddress address: Data) {
-        print("开始连接")
+        print("Start connecting")
     }
     func connect(_ address: String?, callback: @escaping (Bool) -> ()) {
         print("ESPUDPLink connect")
@@ -71,20 +71,20 @@ class ESPUDPLink: NSObject, CrtpDriver, GCDAsyncUdpSocketDelegate {
     @objc func sendWifiStatus() {
         if AFNetworkReachabilityManager.shared().isReachable {
             if AFNetworkReachabilityManager.shared().isReachableViaWiFi {
-                print("连接类型：WiFi")
+                print("Connection Type：WiFi")
                 state = "connected"
                 connectCallback?(true)
             } else if AFNetworkReachabilityManager.shared().isReachableViaWWAN {
-                print("连接类型：移动网络")
+                print("Connection Type：mobile network")
                 connectCallback?(false)
             }
         } else {
-            print("连接类型：没有网络连接")
+            print("Connection Type：No internet connection")
             connectCallback?(false)
         }
     }
     func disconnect() {
-        print("移除消息通知")
+        print("Remove message notification")
         state = "idle"
         //关闭网络状态消息监听
         AFNetworkReachabilityManager.shared().stopMonitoring()
@@ -93,7 +93,7 @@ class ESPUDPLink: NSObject, CrtpDriver, GCDAsyncUdpSocketDelegate {
     }
     
     func sendPacket(_ packet: Data, callback: ((Bool) -> ())?) {
-        print("ESPUDPLink 发送 UDP 数据: \(packet)")
+        print("ESPUDPLink send UDP data: \(packet)")
         clientSocket.send(packet, toHost: udpHost, port: devicePort, withTimeout: -1, tag: 0)
     }
     

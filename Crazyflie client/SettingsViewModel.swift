@@ -151,9 +151,6 @@ final class SettingsViewModel: Observable {
     }
     
     func bootloaderClicked() {
-//        if bluetoothLink.isConnected {
-//            bluetoothLink.disconnect()
-//        }
         crtpDriver.disconnect()
     }
     

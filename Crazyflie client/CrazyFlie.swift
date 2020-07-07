@@ -59,21 +59,6 @@ open class CrazyFlie: NSObject {
                 self?.state = .connected
             }
         }
-//        bluetoothLink?.onStateUpdated{[weak self] (state) in
-//            if state.isEqual(to: "idle") {
-//                self?.state = .idle
-//            } else if state.isEqual(to: "connected") {
-//                self?.state = .connected
-//            } else if state.isEqual(to: "scanning") {
-//                self?.state = .scanning
-//            } else if state.isEqual(to: "connecting") {
-//                self?.state = .connecting
-//            } else if state.isEqual(to: "services") {
-//                self?.state = .services
-//            } else if state.isEqual(to: "characteristics") {
-//                self?.state = .characteristics
-//            }
-//        }
     }
     
     func connect(_ callback:((Bool) -> Void)?) {
@@ -89,43 +74,14 @@ open class CrazyFlie: NSObject {
                 var body:String?
                 
                 // Find the reason and prepare a message
-                title = "网络错误"
-                body = "网络未连接"
+                title = "Network Error"
+                body = "The network is not connected"
                 
                 self?.delegate?.didFail(with: title, message: body)
                 return
             }
             self?.startTimer()
         })
-//        self.bluetoothLink.connect(nil, callback: {[weak self] (connected) in
-//            callback?(connected)
-//            guard connected else {
-//                if self?.timer != nil {
-//                    self?.timer?.invalidate()
-//                    self?.timer = nil
-//                }
-//
-//                var title:String
-//                var body:String?
-//
-//                // Find the reason and prepare a message
-//                if self?.bluetoothLink.getError() == "Bluetooth disabled" {
-//                    title = "Bluetooth disabled"
-//                    body = "Please enable Bluetooth to connect a Crazyflie"
-//                } else if self?.bluetoothLink.getError() == "Timeout" {
-//                    title = "Connection timeout"
-//                    body = "Could not find Crazyflie"
-//                } else {
-//                    title = "Error";
-//                    body = self?.bluetoothLink.getError()
-//                }
-//
-//                self?.delegate?.didFail(with: title, message: body)
-//                return
-//            }
-//
-//            self?.startTimer()
-//        })
     }
     
     func disconnect() {
@@ -147,22 +103,6 @@ open class CrazyFlie: NSObject {
             timer = nil
         }
     }
-//    NSString *str = @"abcde";
-//    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-//    NSLog(@"%@", data);
-//    Byte *testByte = (Byte *)[data bytes];
-//    int count = 0;
-//    for(int i=0;i<[data length];i++)
-//    {
-//        count = count + testByte[i];
-//        NSLog(@"%hhu  ====  %d", testByte[i], count);
-//    }
-//    Byte countByte = (Byte)(0xff & count);
-//    NSData *data2 = [NSData dataWithBytes:&countByte length:sizeof(countByte)];
-//    NSMutableData *sendData = [NSMutableData dataWithData:data];
-//    [sendData appendData:data2];
-//    NSLog(@"countByte:%d === data2: %@ === sendData:%@", countByte, data2, sendData);
-//
     @objc
     private func updateData(timer: Timer) {
         guard let commander = commander else {

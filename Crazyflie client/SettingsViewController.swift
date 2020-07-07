@@ -53,7 +53,7 @@ final class SettingsViewController: UIViewController {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("操作的输入框: \(textField)")
+        print("Operation input box: \(textField)")
         textField.becomeFirstResponder()
         return true
     }
@@ -94,12 +94,8 @@ final class SettingsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onBootloaderClicked( _ sender: Any) {
-        viewModel?.bootloaderClicked()
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("点击页面 touchesBegan")
+        print("Click on the page touchesBegan")
         view.endEditing(true)
     }
 }

@@ -22,10 +22,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Uses Bluetooth to connect to Crazyflie 2.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
