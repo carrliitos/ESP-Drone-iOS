@@ -569,7 +569,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.0.3;
+				CURRENT_PROJECT_VERSION = 0.1.3;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = QWXF6GB4AV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -581,7 +581,7 @@
 					"$(inherited)",
 					"\"$(PROJECT_DIR)/Crazyflie client\"",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.espressif.espdrone;
 				PRODUCT_NAME = "ESP-Drone";
 				PROVISIONING_PROFILE = "";
@@ -601,7 +601,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.0.3;
+				CURRENT_PROJECT_VERSION = 0.1.3;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = QWXF6GB4AV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -613,7 +613,7 @@
 					"$(inherited)",
 					"\"$(PROJECT_DIR)/Crazyflie client\"",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.espressif.espdrone;
 				PRODUCT_NAME = "ESP-Drone";
 				PROVISIONING_PROFILE = "";
