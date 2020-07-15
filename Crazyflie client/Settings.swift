@@ -43,6 +43,7 @@ enum Sensitivity: String {
         guard let sensitivity = sensitivities?[self.rawValue] as? [String : Any] else {
             return nil
         }
+        print("sensitivity", sensitivity, "settings", Settings(sensitivity) as Any)
         return Settings(sensitivity)
     }
     
@@ -52,6 +53,10 @@ enum Sensitivity: String {
         sensitivities?[self.rawValue] = settings.dictionary
         defaults.set(sensitivities, forKey: "sensitivities")
         defaults.synchronize()
+    }
+    func dataDic(dic: Dictionary<String, Any>) -> Settings? {
+        print("字典数据", dic, "settings", Settings(dic) as Any)
+        return Settings(dic)
     }
 }
 

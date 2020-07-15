@@ -21,7 +21,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var connectProgress: UIProgressView!
     @IBOutlet weak var leftView: UIView!
     @IBOutlet weak var rightView: UIView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +43,13 @@ final class ViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @IBAction func yawOnOffClick(_ sender: Any) {
+//        print("switch", (sender as! UISwitch).isOn)
+        let defaults = UserDefaults.standard
+        defaults.set((sender as! UISwitch).isOn, forKey: "isYawOnOff")
+        defaults.synchronize()
     }
     
     //MARK: - IBActions

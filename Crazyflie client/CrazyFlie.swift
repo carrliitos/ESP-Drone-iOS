@@ -114,19 +114,25 @@ open class CrazyFlie: NSObject {
     }
     
     private func sendFlightData(_ roll:Float, pitch:Float, thrust:Float, yaw:Float) {
-        let commandPacket = CommanderPacket(header: CrazyFlieHeader.commander.rawValue, roll: roll, pitch: pitch, yaw: yaw, thrust: UInt16(thrust))
+        let defaults = UserDefaults.standard
+        let isYawOnOff = defaults.bool(forKey: "isYawOnOff")
+        print("isYawOnOff", isYawOnOff as Any)
+        var yawdef = yaw
+        if !isYawOnOff {
+            yawdef = 0.0
+        }
+        let commandPacket = CommanderPacket(header: CrazyFlieHeader.commander.rawValue, roll: roll, pitch: pitch, yaw: yawdef, thrust: UInt16(thrust))
         let data = CommandPacketCreator.data(from: commandPacket)
         let sendData = self.sendDataCRC(data!)
-        print("发送数据: \(sendData)")
+//        print("发送数据: \(sendData)")
         self.crtpDriver.sendPacket(sendData, callback: nil)
-        print("pitch: \(pitch) roll: \(roll) thrust: \(thrust) yaw: \(yaw)")
+        print("pitch: \(pitch) roll: \(roll) thrust: \(thrust) yaw: \(yawdef)")
     }
     func sendDataCRC(_ data:Data) -> Data {
         var sendData = data
         let sendByte = [UInt8](data)
         var count = 0
         for item in sendByte {
-            print(item)
             count = count + Int(item)
 //            print("字节：\(item) === 总和：\(count)")
         }

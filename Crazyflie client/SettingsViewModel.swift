@@ -82,6 +82,7 @@ final class SettingsViewModel: Observable {
         guard let settings = sensitivity.settings else {
             return nil
         }
+        print("Settings sensitivity", settings)
         return settings.pitchRate
     }
     

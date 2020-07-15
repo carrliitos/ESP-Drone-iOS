@@ -93,7 +93,7 @@ class ESPUDPLink: NSObject, CrtpDriver, GCDAsyncUdpSocketDelegate {
     }
     
     func sendPacket(_ packet: Data, callback: ((Bool) -> ())?) {
-        print("ESPUDPLink send UDP data: \(packet)")
+//        print("ESPUDPLink send UDP data: \(packet)")
         clientSocket.send(packet, toHost: udpHost, port: devicePort, withTimeout: -1, tag: 0)
     }
     

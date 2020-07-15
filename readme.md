@@ -1,15 +1,14 @@
-Crazyflie 2 iOS client
+ESP-Drone iOS client
 ======================
 
-Crazyflie 2 client for iPhone.
+ESP-Drone client for iPhone.
 
 Features
 
-- Can connect and control a Crazyflie 2 via Bluetooth Smart
+- Can connect and control a ESP-Drone via UDP
 - Choice of control mode and sensitivity
-- Can update Crazyflie with the latest firmware version
 
-This app requires iOS 8 or higher.
+This app requires iOS 10 or higher.
 
 ## Getting Started
 

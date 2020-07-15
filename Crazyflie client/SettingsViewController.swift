@@ -82,20 +82,48 @@ final class SettingsViewController: UIViewController {
         }
     }
     
+    fileprivate func changeData() {
+        var sensitivity = Dictionary<String, Any>()
+        print("1223", thrustSensitivity.text as Any, "", pitchrollSensitivity.text as Any, "", yawSensitivity.text as Any)
+        var thrustNumber: Float?
+        var pitchNumber: Float?
+        var yawNumber: Float?
+
+        if let thrustDouble = Float(thrustSensitivity.text!) {
+            thrustNumber = thrustDouble
+        }
+        if let pitchDouble = Float(pitchrollSensitivity.text!) {
+            pitchNumber = pitchDouble
+        }
+        if let yawDouble = Float(yawSensitivity.text!) {
+            yawNumber = yawDouble
+        }
+        sensitivity.updateValue(thrustNumber!, forKey: "maxThrust")
+        sensitivity.updateValue(pitchNumber!, forKey: "pitchRate")
+        sensitivity.updateValue(yawNumber!, forKey: "yawRate")
+        let settings = viewModel?.sensitivity.dataDic(dic: sensitivity)
+        print(sensitivity, settings as Any)
+        viewModel?.sensitivity.save(settings: settings!)
+    }
+    
     @IBAction func sensitivityModeChanged(_ sender: Any) {
+        changeData()
         viewModel?.didSetSensitivityMode(at: sensitivitySelector.selectedSegmentIndex)
     }
     
     @IBAction func controlModeChanged(_ sender: Any) {
+        changeData()
         viewModel?.didSetControlMode(at: controlModeSelector.selectedSegmentIndex)
     }
     
     @IBAction func closeClicked(_ sender: Any) {
+        changeData()
         dismiss(animated: true, completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("Click on the page touchesBegan")
+        changeData()
         view.endEditing(true)
     }
 }
