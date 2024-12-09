@@ -1,5 +1,9 @@
+/**
+ * CommandPacket.h
+ */
+
 //
-//  DataStruct.m
+//  CommandPacket.h
 //  Crazyflie client
 //
 //  Created by Martin Eberl on 12.02.17.
